@@ -23,7 +23,7 @@ class BC_coder(Coder.Coder):
                 tt = self._OrBitList(tt,C[j])
             mess = self._XorBitList(tt, P)
             C.append(self.gost_coder.bit_encode(mess, key)[0])
-        return list(it.chain.from_iterable(C)),None
+        return list(it.chain.from_iterable(C[1:])),None
 
 
     def bit_decode(self, code, key):
@@ -38,7 +38,7 @@ class BC_coder(Coder.Coder):
                 F = self._OrBitList(F,C[j])
             mess = self._XorBitList(F, D)
             C.append(mess)
-        return list(it.chain.from_iterable(C)),None
+        return list(it.chain.from_iterable(C[1:])),None
 
 
 
