@@ -1,0 +1,7 @@
+-encode -method DP -input_file input_encode.txt -output_file output_encode.txt -key_file key.txt -iv_file iv.txt
+-decode -method DP -input_file output_encode.txt -output_file output_decode.txt -key_file key.txt -iv_file iv.txt
+
+
+
+-encode -method BC -input_file input_encode.txt -output_file output_encode.txt -key_file key.txt -iv_file iv.txt
+-decode -method BC -input_file output_encode.txt -output_file output_decode.txt -key_file key.txt -iv_file iv.txt
